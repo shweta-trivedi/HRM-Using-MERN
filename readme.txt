@@ -1,5 +1,10 @@
-Project name: crud application using mern stack
-Poject author: Shweta Trivedi
+Project Name: HRM MERN Stack Application
+Author: Shweta Trivedi
+
+Features:
+Authentication APIs: Implemented JWT-based authentication in Node.js with MongoDB.
+Login/Signup Integration: Integrated login/signup APIs in a React app with a header using a layout component.
+User CRUD Operations: Developed a full user management application using the MERN stack.
 
 =========================================================================
 
