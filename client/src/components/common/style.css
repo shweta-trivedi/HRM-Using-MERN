@@ -1,0 +1,85 @@
+
+header {
+    background-color: aliceblue; /* Dark background for header */
+    padding: 15px;
+  }
+  
+  nav ul {
+    list-style-type: none; /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Display list items in one line */
+    justify-content: center; /* Space between links */
+    align-items: center; /* Align items vertically */
+  }
+  
+  nav ul li {
+    display: inline; /* Ensure links stay inline */
+    padding: 0px 5px; /* Padding around links */
+  }
+  
+  nav ul li a, nav ul li button {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Padding around links */
+    background-color:purple; /* Background for links */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  nav ul li a:hover, nav ul li button:hover {
+    background-color: rgb(121, 72, 121); /* Hover effect */
+  }
+  
+  nav ul li button {
+    border: none; /* Remove border for button */
+    cursor: pointer; /* Show pointer cursor */
+    background-color: #444; /* Button background */
+  }
+
+.addUser{
+    width: 25%;
+    background-color: white;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
+    border-radius: 5px;
+    margin: 50px auto;
+    padding: 50px;
+}
+
+.addUserForm {
+    margin-top: 20px;
+}
+
+.addUserForm .inputGroup{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.addUserForm .inputGroup label{
+    margin-bottom: 5px;
+}
+
+.addUserForm .inputGroup input{
+    margin-bottom: 10px;
+    padding: 10px;
+    outline: none;
+}
+
+.addUserForm .inputGroup button{
+    border: 0;
+    outline: none;
+    background-color: purple;
+    color: white;
+    font-weight: 600;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.065);
+    margin-top: 20px;
+}
+
+.addUser h3{
+    margin-top: 10px;
+}

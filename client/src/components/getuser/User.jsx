@@ -3,6 +3,8 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import "./user.css";
 import { Link } from 'react-router-dom'
+//import Header from '../common/Header';  
+
 
 const User = () => {
 
@@ -33,6 +35,8 @@ const User = () => {
   return (
     <div className='userTable'>
         <Link to={"/add"} className='addButton'>Add User</Link>
+        {/* <Header /> */} {/* If not using layout then use it */}
+        
         <table border={1} cellPadding={10} cellSpacing={0}>
             <thead>
                 <tr>
@@ -53,7 +57,8 @@ const User = () => {
                             <td className='actionButtons'>
                                 <button onClick={()=> deleteUser(user._id)}><i className="fa-solid fa-trash"></i></button>
                                 <Link to={`/edit/`+user._id}><i className="fa-solid fa-pen-to-square"></i></Link>
-                            </td>
+                                <Link to={`/view/`+user._id}><i className="fa-regular fa-eye"></i></Link>
+                            </td>  
                         </tr>
                         )
                     })

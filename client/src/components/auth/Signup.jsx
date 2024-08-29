@@ -4,13 +4,14 @@ import axios from "axios";
 import "./add.css";
 import toast from 'react-hot-toast';
 
-const Add = () => {
+const Signup = () => {
 
   const users = {
     fname:"",
     lname:"",
     email:"",
-    password:""
+    password:"",
+    confirmPassword:""
   }
 
   const [user, setUser] = useState(users);
@@ -23,10 +24,10 @@ const Add = () => {
 
   const submitForm = async(e) =>{
     e.preventDefault();
-    await axios.post("http://localhost:8000/api/create", user)
+    await axios.post("http://localhost:8000/api/signup", user)
     .then((response)=>{
        toast.success(response.data.msg, {position:"top-right"})
-       navigate("/user")
+       navigate("/")
     })
     .catch(error => console.log(error))
   }
@@ -34,7 +35,7 @@ const Add = () => {
 
   return (
     <div className='addUser'>
-        <Link to={"/user"}>Back</Link>
+        <Link to={"/"}>Back</Link>
         <h3>Add new user</h3>
         <form className='addUserForm' onSubmit={submitForm}>
             <div className="inputGroup">
@@ -52,13 +53,18 @@ const Add = () => {
             <div className="inputGroup">
                 <label htmlFor="password">Password</label>
                 <input type="password" onChange={inputHandler} id="password" name="password" autoComplete='off' placeholder='password' />
+            </div><div className="inputGroup">
+                <label htmlFor="password">Confirm Password</label>
+                <input type="password" onChange={inputHandler} id="confirmPassword" name="confirmPassword" autoComplete='off' placeholder='password' />
             </div>
+
             <div className="inputGroup">
-                <button type="submit">ADD USER</button>
+                <button type="submit">Signup</button>
             </div>
         </form>
     </div>
   )
 }
+/* END regis */
 
-export default Add
+export default Signup

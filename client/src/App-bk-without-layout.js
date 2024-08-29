@@ -43,6 +43,11 @@ function App() {
       path:"/signup",
       element: <Signup/>,
     },
+   // {
+     // path:"/user",
+      /* element: <User/>, Public /Non-Protected route */
+     // element: <PrivateRoute element={<User />} />, // Protected route
+    //},
 
     {
       path: "/user",
@@ -55,37 +60,21 @@ function App() {
       ],
     },
 
-    {
-      path: "/add",
-      element: <Layout />, // Use Layout that contains Header
-      children: [
-        {
-          path: "/add",
-          element: <PrivateRoute element={<Add />} />, // Protected route
-        },
-      ],
-    },
 
+    {
+      path:"/add",
+      /* element: <Add/>, */
+      element: <PrivateRoute element={<Add />} />, // Protected route
+    },
     {
       path:"/edit/:id",
-      element: <Layout />, // Use Layout that contains Header
-      children: [
-        {
-          path:"/edit/:id",
-          element: <PrivateRoute element={<Edit />} />, // Protected route
-        },
-      ],
+      /* element: <Edit/>, */
+      element: <PrivateRoute element={<Edit />} />, // Protected route
     },
-
     {
       path:"/view/:id",
-      element: <Layout />, // Use Layout that contains Header
-      children: [
-        {
-          path:"/view/:id",
-          element: <PrivateRoute element={<View />} />, // Protected route
-        },
-      ],
+      /* element: <View/>, */
+      element: <PrivateRoute element={<View />} />, // Protected route
     },
   ])
 

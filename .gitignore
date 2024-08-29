@@ -4,8 +4,11 @@
 #     https://www.atlassian.com/git/tutorials/saving-changes/gitignore
 
 # Node artifact files
-client/node_modules/
-client/dist/
+/client/node_modules/
+/client/dist/
+
+/server/node_modules/
+/server/dist/
 
 # testing
 /coverage
@@ -25,25 +28,33 @@ client/yarn-debug.log*
 client/yarn-error.log*
 
 
+# misc
+server/.DS_Store
+server/.env.local
+server/.env.development.local
+server/.env.test.local
+server/.env.production.local
+
+
 
 # Compiled Java class files
-*.class
+# *.class
 
 # Compiled Python bytecode
-*.py[cod]
+# *.py[cod]
 
 # Log files
-*.log
+# *.log
 
 # Package files
-*.jar
+# *.jar
 
 # Maven
 target/
 dist/
 
 # JetBrains IDE
-.idea/
+# .idea/
 
 # Unit test reports
 TEST*.xml
@@ -60,10 +71,10 @@ Thumbs.db
 *.war
 
 # Large media files
-*.mp4
-*.tiff
-*.avi
-*.flv
-*.mov
-*.wmv
+# *.mp4
+# *.tiff
+# *.avi
+# *.flv
+# *.mov
+# *.wmv
 
